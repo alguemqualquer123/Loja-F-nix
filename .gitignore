@@ -1,0 +1,11 @@
+/node_modules
+/Api/node_modules
+/Site/node_modules
+/src
+yarn-error.log
+
+/build
+
+.env
+
+.vercel
