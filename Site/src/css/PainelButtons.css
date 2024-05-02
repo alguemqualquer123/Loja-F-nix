@@ -1,0 +1,30 @@
+.button {
+  background-color: #000000f1;
+  color: #fff;
+  width: 90%;
+  height: 2rem;
+  border: #00000000 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+}
+
+.button:hover {
+  background-color: #3654ff;
+}
+
+.button svg {
+  width: 1em;
+  margin: -0.2em 0.8em 1em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.button:hover svg {
+  transform: translateX(5px);
+}
+
+.text {
+  margin: 0 1.5em
+}
