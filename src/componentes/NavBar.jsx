@@ -15,7 +15,7 @@ import {
 export const NavBar = () => {
   return (
     <section
-      className="w-[100vw] flex flex-row justify-start items-center pl-16 pt-4 font-bold"
+      className="w-[100vw] flex flex-row justify-start items-center pl-16 pt-4 font-bold z-50"
       style={{
         background:
           "linear-gradient(90.19deg, #161616 0.16%, #4b1818 50%, #a31818 95.68%)",
