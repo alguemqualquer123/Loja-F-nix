@@ -32,7 +32,7 @@ html {
 body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
-
+  background: #7c7c7c;
 }
 
 body::-webkit-scrollbar {

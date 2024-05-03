@@ -1,22 +1,14 @@
 import styled from "styled-components";
 
-export const DivNav = styled.nav`
-    position: relative;
-    top: 0;
-    z-index: 999999999999;
-    width: 100%;
-    height: 9%;
-    & #buttonsHover a:hover{
-        transform: scale(1.01)
-    }
-`;
 export const Nav = styled.nav`
     display: flex;
     position: fixed;
     width: 100%;
+    height: 10vh;
     justify-content: space-between;
     align-items: center;
-    background-color: #1b0707;
+    /* background: rgb(0,0,0); */
+    /* background: linear-gradient(0deg, rgba(0,0,0,0) 21%, rgba(0,0,0,0.6811099439775911) 100%); */
     color: white;
     z-index: 1000;
     top: 0;
@@ -141,136 +133,4 @@ export const Nav = styled.nav`
         }
     }
 
-`;
-export const SelectMenus = styled.div`
-    display: flex;  
-    position: relative;
-    width: 10rem;
-    top: 100%;
-    left: 94%;
-    right: 0;
-    background: black;
-    color: white;
-    z-index: 10000;
-    background-color: #333;
-    color: white;
-    & ul {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    & li {
-        padding: 10px;
-        cursor: pointer;
-    }
-    /* &:hover {
-            background-color: #ffff;
-    } */
-    
-`;
-export const SelectMenu = styled.div`
-    display: flex;
-    justify-content: flex-end; 
-    align-items: flex-end;
-    position: fixed;
-    top: 4.2rem;
-    right: 0rem;
-    width: 15rem;
-    height: auto;
-    z-index: 1000;
-    background-color: #000000;
-    border-radius: 0px 0px 10px 10px;
-    font-size: 15px;
-    animation: 1s ease 0s 1 normal none running SelectOpen;
-    & .nfDropDown {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    & div div ul {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    & div div ul li {
-        display: flex;
-        position: relative;
-        height: 3rem;
-    }
-    & .sub-menu-item {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;   
-        width: 15rem;
-    }
-    & .sub-menu-item span {
-        display: flex;
-        position: relative;
-        top: 0;
-        font-size: 8px;
-        color: gray;
-    }
-    & div div ul li:hover {
-        & a {
-            color: red;
-        }
-    }
-    & div div ul li a {
-        position: relative;
-        font-size: 0.9rem;
-        color: white;
-        /* &:hover {
-            color: red;
-        } */
-    }
-    
-    @keyframes SelectOpen {
-        0% {
-            opacity: 0;
-            transform: translateX(10rem);
-        }
-        50% {
-            opacity: 1;
-            transform: translateX(0rem);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0rem);
-        }
-    }
-`;
-
-export const UserLogged = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    & img {
-        width: 2rem;
-        border: 2px solid #ccc;
-        border-radius: 50%;
-        margin-right: 1rem;
-        margin-left: 5rem;
-        &:hover{
-            transform: scale(1.1)
-        }
-    }
-    & span {
-        color: white;
-        font-weight: 500;
-        margin-right: 1rem;
-        &:hover{
-            transform: scale(1.1)
-        }
-    }
 `;
