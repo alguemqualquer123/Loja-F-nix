@@ -5,11 +5,12 @@ import { user } from "./getCookies"
 export const Return = ({ path }) => {
   const navigate = useNavigate()
   useEffect(() => {
-    if (!user) {
+    // if (!user) {
+      // navigate(path)
+    // } else {
+      // navigate(path)
+      // }
       navigate(path)
-    } else {
-      navigate(path)
-    }
-  }, [])
+    }, [])
   return <></>
 }
