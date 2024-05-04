@@ -15,7 +15,7 @@ import {
 export const NavBar = () => {
   return (
     <section
-      className="w-[100vw] flex flex-row justify-start items-center pl-16 pt-4 font-bold z-50"
+      className="w-[100vw] flex flex-row justify-between items-center pl-16 pr-16 pt-4 font-bold z-50"
       style={{
         background:
           "linear-gradient(90.19deg, #161616 0.16%, #4b1818 50%, #a31818 95.68%)",
@@ -26,10 +26,10 @@ export const NavBar = () => {
           <img
             src={FenixPng}
             alt="logo"
-            className="w-[70px] animate-tremulo bg-cover"
+            className="w-[70px] hover:scale-2 hover:animate-tremulo bg-cover"
           ></img>
          
-          <p className="text-white  text-ellipsis hover:cursor-pointer transition-all transform  hover-underline-animation">
+          <p className="text-white text-[20px] font-bold text-ellipsis hover:cursor-pointer transition-all transform  hover-underline-animation">
               Fênix Development
           </p>
         </div>
@@ -37,27 +37,33 @@ export const NavBar = () => {
       <div className="flex flex-row justify-center items-center gap-10 ml-[25vw]">
         <a
           href="/produtos"
-          className="text-white hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation"
+          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Produtos
         </a>
         <a
           href="/contatos"
-          className="text-white hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation"
+          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Scripts
         </a>
         <a
           href="/scripts"
-          className="text-white hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation"
+          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Contatos
         </a>
         <a
           href="/instagram"
-          className="text-white hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation"
+          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Feedbacks
+        </a>
+        <a
+          href="/login"
+          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+        >
+          Login
         </a>
       </div>
     </section>

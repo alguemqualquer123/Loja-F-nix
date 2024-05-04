@@ -54,14 +54,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  /* color: #ff6464; */
-  text-decoration: inherit;
-}
-a:hover {
-  color: #f25353;
-}
 
 body {
   margin: 0;
@@ -70,10 +62,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(90.19deg, #161616 0.16%, #4b1818 50%, #a31818 95.68%);
-}
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 button {
   border-radius: 8px;
@@ -94,7 +82,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -105,4 +93,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
