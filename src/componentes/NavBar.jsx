@@ -15,7 +15,7 @@ import {
 export const NavBar = () => {
   return (
     <section
-      className="w-[100vw] flex flex-row justify-between items-center pl-16 pr-16 pt-4 font-bold z-50"
+      className="w-full flex flex-row justify-between items-center pl-16 pr-16 pt-4 font-bold z-50"
       style={{
         background:
           "linear-gradient(90.19deg, #161616 0.16%, #4b1818 50%, #a31818 95.68%)",
@@ -35,7 +35,7 @@ export const NavBar = () => {
         </div>
       </Link>
       <div className="flex flex-row justify-center items-center gap-10 ml-[25vw]">
-        <a
+        {/* <a
           href="/produtos"
           className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
@@ -64,7 +64,7 @@ export const NavBar = () => {
           className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Login
-        </a>
+        </a> */}
       </div>
     </section>
   );

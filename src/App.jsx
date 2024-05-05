@@ -46,8 +46,12 @@ function App() {
         <section className="w-full h-full mt-[20rem] flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
           <img src={Ondas} alt="" />
           <div className="w-full bg-white flex flex-col justify-center items-center">
-            <h1 className="text-black text-[50px] font-bold">Temos Alguns de nossos Resources Em Exibição !!</h1>
-            <span className="text-black text-[40px] font-bold">Clique no botão de Interagir</span>
+            <h1 className="text-black text-[50px] font-bold">
+              Temos Alguns de nossos Resources Em Exibição !!
+            </h1>
+            <span className="text-black text-[40px] font-bold">
+              Clique no botão de Interagir
+            </span>
             <div className="w-full bg-white grid grid-cols-4 pb-20 pt-10 pl-10  mt-[20rem] gap-10 overflow-auto">
               <MaterialCard
                 Title="Quantic-Phone v1.0"
@@ -105,6 +109,25 @@ function App() {
                 src="https://quantic-phone-mdsu.vercel.app/"
                 className=""
               /> */}
+            </div>
+            <div className="flex flex-col justify-center items-center gap-10 pb-20 pt-10">
+              <h1 className="text-black text-[40px] font-bold">
+                Entre Em Contato Em Nosso Discord !!
+              </h1>
+              <div className="flex justify-center items-center flex-row gap-20">
+                <button
+                  className="border-none hover:shadow-lg hover:shadow-blue-gray-800 transition-all duration-500 active:border-transparent after:border-transparent"
+                  onClick={() => window.open("https://discord.gg/2zX682sDwC")}
+                >
+                  Loja
+                </button>
+                <button
+                  className="border-none hover:shadow-lg hover:shadow-blue-gray-800 transition-all duration-500 active:border-transparent after:border-transparent"
+                  onClick={() => window.open("https://discord.gg/gSHUVHXNwP")}
+                >
+                  Comunidade
+                </button>
+              </div>
             </div>
           </div>
         </section>
