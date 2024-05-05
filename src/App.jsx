@@ -55,7 +55,7 @@ function App() {
             </span>
             <div className="w-full bg-white grid grid-cols-4 pb-20 pt-10 pl-10  mt-[20rem] gap-10 overflow-auto">
               <MaterialCard
-                Title="Quantic-Phone v1.0"
+                Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="BY / SR VINIX"
                 src="https://quantic-phone-mdsu.vercel.app/"
