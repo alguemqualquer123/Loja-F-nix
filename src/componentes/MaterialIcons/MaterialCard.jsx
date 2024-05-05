@@ -9,7 +9,7 @@ import {
 
 const MaterialCard = ({ src,Title,Text, Footer,className }) => {
   return (
-    <Card className="w-96">
+    <Card className="w-96  transition-all duration-700 hover:scale-[1.01] hover:shadow-lg hover:shadow-black">
       <CardHeader
         floated={false}
         shadow={true}
@@ -31,7 +31,7 @@ const MaterialCard = ({ src,Title,Text, Footer,className }) => {
         <Typography color="blue-gray" className="font-medium" textGradient>
          {Footer}
         </Typography>
-        <button className="text-white border-none mt-10 shadow shadow-blue-500/40 hover:shadow-indigo-500/40 hover:scale-[1.05] transition-all duration-500" onClick={() => window.open(`${src}`)}>Interagir</button>
+        <button className="text-white border-none mt-10 hover:shadow hover:shadow-black  transition-all duration-500" onClick={() => window.open(`${src}`)}>Interagir</button>
       </CardBody>
       <CardFooter className="flex justify-center gap-7 pt-2">
         <Tooltip content="Like">

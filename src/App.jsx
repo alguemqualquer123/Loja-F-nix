@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { Avatar, Carousel } from "@material-tailwind/react";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import SRVINIXPNG from "@app/assets/authores/srvinix.jpg";
 import MaterialCard from "@app/componentes/MaterialIcons/MaterialCard.jsx";
 import {
   api,
@@ -47,7 +48,7 @@ function App() {
           <div className="w-full bg-white flex flex-col justify-center items-center">
             <h1 className="text-black text-[50px] font-bold">Temos Alguns de nossos Resources Em Exibição !!</h1>
             <span className="text-black text-[40px] font-bold">Clique no botão de Interagir</span>
-            <div className="w-full bg-white grid grid-cols-4 pb-20 pt-0 pl-10  mt-[20rem] gap-10 overflow-auto">
+            <div className="w-full bg-white grid grid-cols-4 pb-20 pt-10 pl-10  mt-[20rem] gap-10 overflow-auto">
               <MaterialCard
                 Title="Quantic-Phone v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
@@ -137,39 +138,20 @@ function App() {
               </span>
             </div>
 
-            <div className="flex items-center -space-x-4 gap-1 pt-2 pb-2 pr-2 pl-2">
-              <Tippy content="Hello">
+            <div className="w-auto h-auto flex items-center -space-x-4 gap-1 pt-2 pb-2 pr-2 pl-2">
+              <Tippy content="SR VINIX">
                 <img
-                  variant="circular"
                   alt="user 1"
-                  className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full w-[40px] transition-none duration-1000 hover:scale-[1.1] animate"
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full h-[30px] w-[30px] transition-all duration-1000 hover:scale-[1.1]"
+                  src={SRVINIXPNG}
                 />
               </Tippy>
-              <img
+              {/* <img
                 variant="circular"
                 alt="user 1"
                 className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full w-[40px] transition-none duration-1000 hover:scale-[1.1] animate"
                 src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              />
-              <img
-                variant="circular"
-                alt="user 1"
-                className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full w-[40px] transition-none duration-1000 hover:scale-[1.1] animate"
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              />
-              <img
-                variant="circular"
-                alt="user 1"
-                className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full w-[40px] transition-none duration-1000 hover:scale-[1.1] animate"
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              />
-              <img
-                variant="circular"
-                alt="user 1"
-                className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full w-[40px] transition-none duration-1000 hover:scale-[1.1] animate"
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-              />
+              /> */}
             </div>
 
             <div className="">
