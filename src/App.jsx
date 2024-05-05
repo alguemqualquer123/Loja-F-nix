@@ -23,7 +23,7 @@ import {
 function App() {
   return (
     <main className="w-screen flex flex-col justify-start items-start overflow-y-auto">
-      <img src={Dots} alt="" className="bg-cover bg-no-repeat absolute top-0" />
+      <img src={Dots} alt="" className="bg-cover bg-no-repeat absolute top-0" draggable={false}/>
       <NavBar />
       <motion.div
         initial={{ opacity: 0 }}
@@ -61,7 +61,7 @@ function App() {
                 src="https://quantic-phone-mdsu.vercel.app/"
                 Image={FENIXPNG}
                 ToogleImagem={true}
-                className=""
+                className="bg-gray-800"
               />
               <MaterialCard
                 Title="Pause Menu Capital SP v1.0"
