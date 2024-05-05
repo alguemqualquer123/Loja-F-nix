@@ -55,7 +55,7 @@ function App() {
                 src="https://quantic-phone-mdsu.vercel.app/"
                 className=""
               />
-              <MaterialCard
+              {/* <MaterialCard
                 Title="Quantic-Phone v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="BY / SR VINIX"
@@ -103,7 +103,7 @@ function App() {
                 Footer="BY / SR VINIX"
                 src="https://quantic-phone-mdsu.vercel.app/"
                 className=""
-              />
+              /> */}
             </div>
           </div>
         </section>
