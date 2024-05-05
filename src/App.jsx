@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { Avatar, Carousel } from "@material-tailwind/react";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import FENIXPNG from "@app/assets/fenix.png";
 import SRVINIXPNG from "@app/assets/authores/srvinix.jpg";
 import MaterialCard from "@app/componentes/MaterialIcons/MaterialCard.jsx";
 import {
@@ -58,7 +59,17 @@ function App() {
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="BY / SR VINIX"
                 src="https://quantic-phone-mdsu.vercel.app/"
+                Image={FENIXPNG}
+                ToogleImagem={true}
                 className=""
+              />
+              <MaterialCard
+                Title="Pause Menu Capital SP v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src={"https://pause-menu-capital.vercel.app/"}
+                Image={FENIXPNG}
+                ToogleImagem={true}
               />
               {/* <MaterialCard
                 Title="Quantic-Phone v1.0"
