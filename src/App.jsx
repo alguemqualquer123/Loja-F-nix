@@ -32,10 +32,10 @@ function App() {
       >
         <section className="w-[100vw] ml-[4rem] mt-[4rem] pb-4 pt-4 flex flex-col  justify-center items-center gap-2 p-5 transition-all animate-retivalC">
           <h2 className="text-white text-[30px] font-bold font-signika">
-            Olá, Seja Bem Vindo a Fênix{" "}
-            <span className="text-[#a31818] text-[30px] font-signika">
+            Olá, Seja Bem Vindo a  Fênix{" "}
+            {/* <span className="text-[#a31818] text-[30px] font-signika">
               Development
-            </span>
+            </span> */}
           </h2>
           <h2 className="text-white text-[20px] font-semibold font-signika">
             Esta procurando novos scripts para a sua cidade inovadores e que vai
