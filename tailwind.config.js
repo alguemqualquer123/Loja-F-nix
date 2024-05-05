@@ -1,4 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+
+module.exports = withMT({
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+});
 export default {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
@@ -6,6 +16,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'regal-blue': '#243c5a',
+      },
       fontFamily: {
         'signika': ['"Signika Negative"', 'sans-serif']
       },

@@ -7,9 +7,10 @@ import Ondas from "@app/assets/ondas.png";
 import Dots from "@app/assets/dots.png";
 import Typewriter from "@app/componentes/Typewriter/Typewriter";
 import { motion } from "framer-motion";
-import { Avatar } from "@material-tailwind/react";
+import { Avatar, Carousel } from "@material-tailwind/react";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import MaterialCard from "@app/componentes/MaterialIcons/MaterialCard.jsx";
 import {
   api,
   config,
@@ -43,7 +44,68 @@ function App() {
 
         <section className="w-full h-full mt-[20rem] flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
           <img src={Ondas} alt="" />
-          <div className="w-full h-[40rem] bg-white"></div>
+          <div className="w-full bg-white flex flex-col justify-center items-center">
+            <h1 className="text-black text-[50px] font-bold">Temos Alguns de nossos Resources Em Exibição !!</h1>
+            <span className="text-black text-[40px] font-bold">Clique no botão de Interagir</span>
+            <div className="w-full bg-white grid grid-cols-4 pb-20 pt-0 pl-10  mt-[20rem] gap-10 overflow-auto">
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+              <MaterialCard
+                Title="Quantic-Phone v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src="https://quantic-phone-mdsu.vercel.app/"
+                className=""
+              />
+            </div>
+          </div>
         </section>
 
         <section
@@ -120,21 +182,21 @@ function App() {
             </div>
           </div>
         </section>
+        <div className="fixed bottom-[1rem] left-[1rem] flex flex-col justify-center items-center font-signika text-[20px] text-gray-500 z-[50]">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            strokeWidth="0"
+            viewBox="0 0 16 16"
+            height="15"
+            width="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7.5.026C4.958.286 3 2.515 3 5.188V5.5h4.5V.026zm1 0V5.5H13v-.312C13 2.515 11.042.286 8.5.026zM13 6.5H3v4.313C3 13.658 5.22 16 8 16s5-2.342 5-5.188V6.5z"></path>
+          </svg>{" "}
+          Deslize para ver mais
+        </div>
       </motion.div>
-      <div className="fixed bottom-[1rem] left-[1rem] flex flex-col justify-center items-center font-signika text-[20px] text-gray-500 z-[50]">
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth="0"
-          viewBox="0 0 16 16"
-          height="15"
-          width="15"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M7.5.026C4.958.286 3 2.515 3 5.188V5.5h4.5V.026zm1 0V5.5H13v-.312C13 2.515 11.042.286 8.5.026zM13 6.5H3v4.313C3 13.658 5.22 16 8 16s5-2.342 5-5.188V6.5z"></path>
-        </svg>{" "}
-        Deslize para ver mais
-      </div>
     </main>
   );
 }
