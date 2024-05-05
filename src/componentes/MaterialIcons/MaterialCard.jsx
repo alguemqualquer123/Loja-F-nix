@@ -9,7 +9,7 @@ import {
 
 const MaterialCard = ({ src,Title,Text, Footer,className }) => {
   return (
-    <Card className="w-96  transition-all duration-700 hover:scale-[1.01] hover:shadow-lg hover:shadow-black">
+    <Card className="w-96  transition-all duration-1000 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-black">
       <CardHeader
         floated={false}
         shadow={true}
