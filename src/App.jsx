@@ -87,6 +87,14 @@ function App() {
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />
+              <MaterialCard
+                Title="Fênix Garagem v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="BY / SR VINIX"
+                src={"https://fenix-garagem.vercel.app/"}
+                Image={FENIXPNG}
+                ToogleImagem={true}
+              />
               {/* <MaterialCard
                 Title="Quantic-Phone v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
