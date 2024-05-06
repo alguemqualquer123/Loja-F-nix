@@ -58,7 +58,7 @@ function App() {
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="BY / SR VINIX"
-                src="https://quantic-phone-mdsu.vercel.app/"
+                src="https://phone.fenixdevelopment.com.br"
                 Image={FENIXPNG}
                 ToogleImagem={true}
                 className="bg-gray-800"
@@ -67,7 +67,7 @@ function App() {
                 Title="Pause Menu Capital SP v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="BY / SR VINIX"
-                src={"https://pause-menu-capital.vercel.app/"}
+                src={"https://pause.fenixdevelopment.com.br"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />
@@ -83,7 +83,7 @@ function App() {
                 Title="Goianox AC v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="BY / SR VINIX"
-                src={"https://goianox-ac.vercel.app/"}
+                src={"https://goianoxac.fenixdevelopment.com.br"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />
@@ -91,7 +91,7 @@ function App() {
                 Title="Fênix Garagem v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="BY / SR VINIX"
-                src={"https://fenix-garagem.vercel.app/"}
+                src={"https://garagem.fenixdevelopment.com.br"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />
