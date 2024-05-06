@@ -53,7 +53,7 @@ function App() {
             <span className="text-black text-[40px] font-bold">
               Clique no botão de Interagir
             </span>
-            <div className="w-full bg-white grid grid-cols-4 pb-20 pt-10 pl-10  mt-[20rem] gap-10 overflow-auto">
+            <div className="w-full bg-white grid grid-cols-3 pb-20 pt-10 pl-10  mt-[20rem]">
               <MaterialCard
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"

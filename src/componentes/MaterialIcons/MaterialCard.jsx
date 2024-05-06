@@ -18,7 +18,7 @@ const MaterialCard = ({
   ToogleImagem,
 }) => {
   return (
-    <Card className="w-96  transition-all duration-1000 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-900/40 shadow-blue-900/90 " draggable={false}>
+    <Card className="w-96  transition-all duration-1000 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-900/40 shadow-blue-900/90 scale-[0.75]" draggable={false}>
       <CardHeader
         floated={false}
         shadow={true}
