@@ -66,7 +66,7 @@ function App() {
               <MaterialCard
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
-                Footer="BY / SR VINIX"
+                Footer="RESOURCE PRIVADO"
                 src="https://phone.fenixdevelopment.com.br"
                 Image={FENIXPNG}
                 ToogleImagem={true}
@@ -75,7 +75,7 @@ function App() {
               <MaterialCard
                 Title="Pause Menu Capital SP v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
-                Footer="BY / SR VINIX"
+                Footer="R$ 250"
                 src={"https://pause.fenixdevelopment.com.br"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
@@ -83,7 +83,7 @@ function App() {
               <MaterialCard
                 Title="Fênix Hud v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
-                Footer="BY / SR VINIX"
+                Footer="R$ 250"
                 src={"https://f-nix-hud.vercel.app/"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
@@ -91,7 +91,7 @@ function App() {
               <MaterialCard
                 Title="Goianox AC v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
-                Footer="BY / SR VINIX"
+                Footer="RESOURCE PRIVADO"
                 src={"https://goianoxac.fenixdevelopment.com.br"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
@@ -99,7 +99,7 @@ function App() {
               <MaterialCard
                 Title="Fênix Garagem v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
-                Footer="BY / SR VINIX"
+                Footer="R$ 180"
                 src={"https://garagem.fenixdevelopment.com.br"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
