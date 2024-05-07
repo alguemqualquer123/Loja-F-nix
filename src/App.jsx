@@ -20,25 +20,31 @@ import {
   optionsLi,
   optionsButtons,
 } from "@app/config.js";
+import { VscGithub } from "react-icons/vsc";
+import { IoLogoDiscord } from "react-icons/io5";
+import { RiInstagramFill } from "react-icons/ri";
+
 function App() {
   return (
-    <main className="w-screen flex flex-col justify-start items-start overflow-y-auto">
-      <img src={Dots} alt="" className="bg-cover bg-no-repeat absolute top-0" draggable={false}/>
+    <main className="w-screen flex flex-col justify-start items-start overflow-y-auto transition-all duration-700">
+      <img
+        src={Dots}
+        alt=""
+        className="bg-cover bg-no-repeat absolute top-0"
+        draggable={false}
+      />
       <NavBar />
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // exit={{ opacity: 0 }}
         transition={{ duration: 4.5 }}
       >
         <section className="w-[100vw] ml-[4rem] mt-[4rem] pb-4 pt-4 flex flex-col  justify-center items-center gap-2 p-5 transition-all animate-retivalC">
-          <h2 className="text-white text-[30px] font-bold font-signika">
-            Olá, Seja Bem Vindo a  Fênix{" "}
-            {/* <span className="text-[#a31818] text-[30px] font-signika">
-              Development
-            </span> */}
+          <h2 className="text-indigo-50  from-indigo-500 to-indigo-600 font-bold font-signika md:text-[24px] sm:text-[30px] lg:text-[40px] 2xl:text-[50px]">
+            Olá, Seja Bem Vindo a Fênix
           </h2>
-          <h2 className="text-white text-[20px] font-semibold font-signika">
+          <h2 className="text-white text-[20px] font-semibold font-signika md:text-[24px] sm:text-[15px] lg:text-[20px] 2xl:text-[25px]">
             Esta procurando novos scripts para a sua cidade inovadores e que vai
             acrescentar bastante na sua cidade ?
           </h2>
@@ -46,14 +52,17 @@ function App() {
 
         <section className="w-full h-full mt-[20rem] flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
           <img src={Ondas} alt="" />
-          <div className="w-full bg-white flex flex-col justify-center items-center">
-            <h1 className="text-black text-[50px] font-bold">
+          <div
+            className="w-full bg-white flex flex-col justify-center items-center"
+            id="produtos"
+          >
+            <h1 className="text-black md:text-[24px] sm:text-[50px] lg:text-[40px] 2xl:text-[50px] font-bold">
               Temos Alguns de nossos Resources Em Exibição !!
             </h1>
-            <span className="text-black text-[40px] font-bold">
+            <span className="text-black md:text-[24px] sm:text-[50px] lg:text-[40px] 2xl:text-[50px] font-bold">
               Clique no botão de Interagir
             </span>
-            <div className="w-full bg-white grid grid-cols-3 pb-20 pt-10 pl-10  mt-[20rem]">
+            <div className="bg-white grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4  pb-10 pt-10 gap-4 justify-center items-center">
               <MaterialCard
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
@@ -145,23 +154,37 @@ function App() {
                 className=""
               /> */}
             </div>
-            <div className="flex flex-col justify-center items-center gap-10 pb-20 pt-10">
-              <h1 className="text-black text-[40px] font-bold">
+            <div
+              className="flex flex-col justify-center items-center gap-10 pb-20 pt-10"
+              id="Contatos"
+            >
+              <h1 className="text-black text-[40px] font-bold uppercase drop-shadow-lg shadow-black">
                 Entre Em Contato Em Nosso Discord !!
               </h1>
-              <div className="flex justify-center items-center flex-row gap-20">
+              <div className="flex justify-between items-center flex-row gap-4 p-2">
                 <button
-                  className="border-none hover:shadow-lg hover:shadow-blue-gray-800 transition-all duration-500 active:border-transparent after:border-transparent"
+                  className="bg-gradient-to-r from-red-500 to-red-600 border-none border-transparent hover:text-black hover:shadow-black hover:shadow-1xl transition-all duration-500"
                   onClick={() => window.open("https://discord.gg/2zX682sDwC")}
                 >
                   Loja
                 </button>
                 <button
-                  className="border-none hover:shadow-lg hover:shadow-blue-gray-800 transition-all duration-500 active:border-transparent after:border-transparent"
+                  className="border-none hover:shadow-1xl hover:shadow-blue-gray-800 hover:text-red-700 transition-all duration-500 active:border-transparent after:border-transparent"
                   onClick={() => window.open("https://discord.gg/gSHUVHXNwP")}
                 >
                   Comunidade
                 </button>
+                <div className="flex justify-center items-center gap-4 p-4">
+                  <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
+                    <VscGithub className="size-8"  onClick={() => window.open("https://github.com/alguemqualquer123/")}/>
+                  </div>
+                  <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
+                    <IoLogoDiscord className="size-8"  onClick={() => window.open("https://discord.gg/CwQrSypj2T")}/>
+                  </div>
+                  <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
+                    <RiInstagramFill className="size-8"  onClick={() => window.open("https://www.instagram.com/vinix_santoos/")}/>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -181,7 +204,10 @@ function App() {
               className="w-full h-full bg-cover bg-no-repeat"
             />
           </div> */}
-          <div className="w-full bg-[#161111] flex flex-row justify-between items-center pb-[2rem] pt-[2rem] ">
+          <div
+            className="w-full bg-[#161111] flex flex-row justify-between items-center pb-[2rem] pt-[2rem]"
+            id="Feedbacks"
+          >
             <a
               className="ml-[16rem] font-bold text-[20px] text-white hover:text-white  mt-[2rem]"
               href="#termos"

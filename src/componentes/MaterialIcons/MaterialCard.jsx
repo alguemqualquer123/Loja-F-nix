@@ -18,11 +18,14 @@ const MaterialCard = ({
   ToogleImagem,
 }) => {
   return (
-    <Card className="w-96  transition-all duration-1000 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-900/40 shadow-blue-900/90 scale-[0.75]" draggable={false}>
+    <Card
+      className="w-[24rem] transition-all duration-500 hover:translate-y-[-5px] sm:scale-[0.75] md:scale-[0.85] 2xl:scale-[0.75] lg:scale-[0.85] hover:shadow-2xl hover:shadow-black/20"
+      draggable={false}
+    >
       <CardHeader
         floated={false}
         shadow={true}
-        className="h-80 flex justify-center items-center scale-[1] bg-gray-900/90"
+        className="h-60 flex justify-center items-center bg-gray-900/90"
       >
         {!ToogleImagem ? (
           <iframe
@@ -36,7 +39,7 @@ const MaterialCard = ({
             }`}
           />
         ) : (
-          <img src={Image} alt="" draggable={false}/>
+          <img src={Image} alt="" draggable={false} className="w-1/2" />
         )}
       </CardHeader>
       <CardBody className="text-center ">

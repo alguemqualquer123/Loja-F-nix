@@ -13,9 +13,17 @@ import {
 } from "../config.js";
 
 export const NavBar = () => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ block: "start", behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
-      className="w-full flex flex-row justify-between items-center pl-16 pr-16 pt-4 font-bold z-50"
+      className="w-full flex flex-row justify-between items-center pl-16 pr-16 pt-4 font-bold z-50 "
       style={{
         background:
           "linear-gradient(90.19deg, #161616 0.16%, #4b1818 50%, #a31818 95.68%)",
@@ -29,42 +37,42 @@ export const NavBar = () => {
             className="w-[70px] hover:scale-2 hover:animate-tremulo bg-cover"
           ></img>
          
-          <p className="text-white text-[20px] font-bold text-ellipsis hover:cursor-pointer transition-all transform  hover-underline-animation">
+          <p className="text-white text-[20px]  md:text-[20px] xl:text-[20px]  sm:text-[20px]  lg:text-[10px] font-bold text-ellipsis hover:cursor-pointer transition-all transform  hover-underline-animation">
               Fênix Development
           </p>
         </div>
       </Link>
       <div className="flex flex-row justify-center items-center gap-10 ml-[25vw]">
-        {/* <a
-          href="/produtos"
+        <a
+          onClick={() => scrollToSection('inicio')}
+          id="inicio"
+          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+        >
+          Inicio
+        </a>
+        <a
+          onClick={() => scrollToSection('produtos')}
           className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Produtos
         </a>
         <a
-          href="/contatos"
-          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
-        >
-          Scripts
-        </a>
-        <a
-          href="/scripts"
+          onClick={() => scrollToSection('Contatos')}
           className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Contatos
         </a>
         <a
-          href="/instagram"
+          onClick={() => scrollToSection('Feedbacks')}
           className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Feedbacks
         </a>
         <a
-          href="/login"
-          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem cursor-not-allowed"
         >
           Login
-        </a> */}
+        </a>
       </div>
     </section>
   );
