@@ -68,11 +68,11 @@ export const NavBar = () => {
         >
           Feedbacks
         </a>
-        <a
+        {/* <a
           className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem cursor-not-allowed"
         >
           Login
-        </a>
+        </a> */}
       </div>
     </section>
   );
