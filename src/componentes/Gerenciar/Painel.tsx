@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { PNavBar } from "./NavBar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Route, Routes, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 

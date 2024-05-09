@@ -1,25 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FenixPng from "@app/assets/logo.png";
 import { InstanceSettings } from "@app/Server/Auth/server";
-import { CheckUserAdmin } from "@app/Server/ControleRoles/server.ts";
 
 export const PNavBar = () => {
-  const [ChequeAdmin, setChequeAdmin] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const isAdmin = CheckUserAdmin();
-      setChequeAdmin(isAdmin);
-    }, 1);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
