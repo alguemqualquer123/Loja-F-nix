@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import FenixPng from "../assets/logo.png";
 import ReactSvg from "../assets/react.svg";
 import Typewriter from "@app/componentes/Typewriter/Typewriter";
@@ -9,6 +9,8 @@ import { CheckUserAdmin } from "@app/Server/ControleRoles/server.ts";
 
 export const NavBar = () => {
   const [ChequeAdmin, setChequeAdmin] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,7 +52,16 @@ export const NavBar = () => {
       </Link>
       <div className="flex flex-row justify-center items-center gap-10 ml-[25vw]">
         <a
-          onClick={() => scrollToSection("inicio")}
+          onClick={() => {
+            if (location.pathname === "/") {
+              scrollToSection("inicio");
+            } else {
+              navigate("/");
+              setTimeout(() => {
+                scrollToSection("inicio");
+              }, 2000);
+            }
+          }}
           className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Inicio

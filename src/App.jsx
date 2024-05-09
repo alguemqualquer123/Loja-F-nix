@@ -24,14 +24,14 @@ import { InstanceSettings } from "@app/Server/Auth/server";
 function App() {
   useEffect(() => {
     const interval = setInterval(() => {
-      ControleRoles()
+      ControleRoles();
     }, 5000);
     return () => {
       clearInterval(interval);
     };
   }, []);
   useEffect(() => {
-    ControleRoles()
+    ControleRoles();
   }, []);
 
   return (
@@ -52,14 +52,16 @@ function App() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <section className="w-[100vw] ml-[4rem] mt-[20rem] pb-4 pt-4 flex flex-col  justify-center items-center gap-2 p-5 transition-all animate-retivalC">
-          <h2 className="text-indigo-50  from-indigo-500 to-indigo-600 font-bold font-signika md:text-[24px] sm:text-[30px] lg:text-[40px] 2xl:text-[50px]">
-            Olá, Seja Bem Vindo a Fênix
-          </h2>
-          <h2 className="text-white text-[20px] font-semibold font-signika md:text-[24px] sm:text-[15px] lg:text-[20px] 2xl:text-[25px]">
-            Esta procurando novos scripts para a sua cidade inovadores e que vai
-            acrescentar bastante na sua cidade ?
-          </h2>
+        <section className="w-full ml-[4rem] mb-[100vh] mt-[30vh] ">
+          <div className="flex flex-col  justify-center items-center gap-2 transition-all animate-retivalC">
+            <h2 className="text-indigo-50  from-indigo-500 to-indigo-600 font-bold font-signika md:text-[24px] sm:text-[30px] lg:text-[40px] 2xl:text-[50px]">
+              Olá, Seja Bem Vindo a Fênix
+            </h2>
+            <h2 className="text-white text-[20px] font-semibold font-signika md:text-[24px] sm:text-[15px] lg:text-[20px] 2xl:text-[25px]">
+              Esta procurando novos scripts para a sua cidade inovadores e que
+              vai acrescentar bastante na sua cidade ?
+            </h2>
+          </div>
         </section>
 
         <section className="w-full h-full mt-[20rem] flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
