@@ -7,6 +7,7 @@ export const Login = () => {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.hash.substring(1));
+    console.log(queryParams)
     const accessToken = queryParams.get('access_token');
     const userData = queryParams.get('user_data');
     if (accessToken || userData) {
