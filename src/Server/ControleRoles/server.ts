@@ -13,7 +13,22 @@ export const CheckUserAdmin = () => {
   const allAdmins = InstanceSettings.getAllAdmins();
   const getUser = InstanceSettings.getUserProfile();
   const loggedInAdmin = allAdmins.some(
-    (item) => item.discordId === getUser?.id
+    (item: { discordId: string | undefined }) => item.discordId === getUser?.id
   );
   return loggedInAdmin;
+};
+
+const Hyerarqui = ["Gerente", "Vendedor", "Postador", "Membro"];
+
+
+export const getRoleIndex = (role: string) => {
+  return Hyerarqui.indexOf(role);
+};
+
+
+export const HyerarquiList = (name: string | any): number | undefined => {
+  if (Hyerarqui[name]) {
+    return Hyerarqui.indexOf(name);
+  }
+  return;
 };

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Routing } from "./auth/Routes.jsx";
 import { BrowserRouter } from "react-router-dom";
 import "@app/css/index.css";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "@app/componentes/NavBar.jsx";
 
 class ErrorBoundary extends React.Component {

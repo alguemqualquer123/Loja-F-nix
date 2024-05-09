@@ -2,7 +2,7 @@ import { api } from "@app/config";
 
 export const Auth = () => {};
 
-interface UserProfileType {
+export interface UserProfileType {
   id?: string;
   username?: string;
   avatar?: string;
@@ -22,7 +22,7 @@ interface UserProfileType {
   verified?: boolean;
 }
 
-interface AllAdminsType {
+export interface AllAdminsType {
   _id?: string;
   id?: string;
   discordId?: string;
@@ -54,7 +54,7 @@ class Settings {
     email: "",
     verified: false,
   };
-  public AllAdmins: AllAdminsType[] = [];
+  public AllAdmins: AllAdminsType[] | any = [];
 
   private constructor() {}
 
@@ -75,7 +75,7 @@ class Settings {
     }
   }
 
-  public getAllAdmins(): AllAdminsType[] {
+  public getAllAdmins() {
     return this.AllAdmins;
   }
 
@@ -98,11 +98,24 @@ class Settings {
     const userString = localStorage.getItem("user");
     let dataid = userString ? JSON.parse(userString) : null;
     if (dataid && dataid.id) {
-      dataid.avatar = `https://cdn.discordapp.com/avatars/${dataid.id ? dataid.id : ''}/${dataid.avatar ? dataid.avatar :''}`,
-      dataid.banner =  `https://cdn.discordapp.com/banners/${dataid.id ? dataid.id : ''}/${dataid.banner ? dataid.banner : ''}`
+      (dataid.avatar = `https://cdn.discordapp.com/avatars/${
+        dataid.id ? dataid.id : ""
+      }/${dataid.avatar ? dataid.avatar : ""}`),
+        (dataid.banner = `https://cdn.discordapp.com/banners/${
+          dataid.id ? dataid.id : ""
+        }/${dataid.banner ? dataid.banner : ""}`);
       return dataid;
     }
     return null;
+  }
+  public async getUserInfos(): Promise<any> {
+    try {
+      const response = await api.get("getAllUserInfos");
+      return response.data;
+    } catch (error) {
+      console.error("Failed to load admin data", error);
+      return null;
+    }
   }
 }
 

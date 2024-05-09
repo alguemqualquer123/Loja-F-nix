@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PNavBar } from "./NavBar";
 import { Route, Routes, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Gerenciar } from "./Gerenciar";
 
 const Pages = ({ Pagina }: { Pagina: string }) => {
   // let { GetRoute } = useParams();
@@ -26,13 +27,14 @@ export const Painel = () => {
     action: string;
     icon?: string;
   }) => {
-    console.log(icon)
+    console.log(icon);
     return (
-      <li className="w-[90%] p-4 flex flex-row gap-10 justify-center items-center hover:bg-black/20 rounded-lg">
-        <Link to={`/dashboard/${action}`} className="text-black font-bold">
-          {text}
-        </Link>
-      </li>
+      <Link
+        to={`/dashboard/${action}`}
+        className="w-[90%] p-4 flex flex-row gap-10 justify-center items-center hover:bg-black/70 rounded-lg"
+      >
+        <a className="text-black font-bold">{text}</a>
+      </Link>
     );
   };
 
@@ -52,7 +54,7 @@ export const Painel = () => {
         <Routes>
           <Route path={"/dashboard"} index />
           <Route path="/painel" element={<Pages Pagina="painel" />} />
-          <Route path="/gerenciar" element={<Pages Pagina="gerenciar" />} />
+          <Route path="/gerenciar" element={<Gerenciar />} />
           <Route path="/scripts" element={<Pages Pagina="scripts" />} />
         </Routes>
       </div>
