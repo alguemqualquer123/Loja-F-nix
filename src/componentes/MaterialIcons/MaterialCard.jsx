@@ -19,7 +19,7 @@ const MaterialCard = ({
 }) => {
   return (
     <Card
-      className="w-[24rem] transition-all duration-500 hover:translate-y-[-5px] sm:scale-[0.75] md:scale-[0.85] 2xl:scale-[0.75] lg:scale-[0.85] hover:shadow-2xl hover:shadow-black/20"
+      className="w-[24rem] transition-all duration-500  hover:scale-[0.76] scale-[0.75] hover:shadow-2xl hover:shadow-black/20 hover:bg-gray-900/20 hover:text-white"
       draggable={false}
     >
       <CardHeader
@@ -58,7 +58,7 @@ const MaterialCard = ({
           {Footer}
         </Typography>
         <button
-          className="text-white border-none mt-10 hover:shadow hover:shadow-black  transition-all duration-500"
+          className="bg-black rounded-lg p-2 font-bold text-white border-none mt-10"
           onClick={() => window.open(`${src}`)}
         >
           Interagir
