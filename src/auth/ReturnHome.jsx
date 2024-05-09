@@ -1,16 +1,15 @@
-import { useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { user } from "./getCookies"
-
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { InstanceSettings } from "@app/Server/Auth/server";
 export const Return = ({ path }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   useEffect(() => {
-    // if (!user) {
-      // navigate(path)
-    // } else {
-      // navigate(path)
-      // }
-      navigate(path)
-    }, [])
-  return <></>
-}
+    if (path === "gerenciar" && !InstanceSettings.getUserProfile()) {
+      return;
+    } else {
+      navigate(path);
+      return;
+    }
+  }, []);
+  return <></>;
+};

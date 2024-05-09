@@ -1,16 +1,25 @@
 import { Routes, Route } from "react-router-dom"
-import App from "../App"
+import App from "@app/App.jsx"
 import { Return } from "./ReturnHome.jsx"
-import '../css/index.css'
+import { Login } from "./Login.jsx"
+import '@app/css/index.css'
 export const Routing = () => {
   const availableRoutes = [
     {
       path: "/",
-      element: <App/>
+      element: <App />
+    },
+    {
+      path: "/dashboard",
+      element: <></>
     },
     {
       path: "/",
       element: <Return path='/' />
+    },
+    {
+      path: "/login",
+      element: <Login />
     },
     {
       path: "/*",
@@ -19,7 +28,7 @@ export const Routing = () => {
   ]
   return <Routes>
     {availableRoutes.map((r) => {
-      return <Route {...r} key={r.path}/>
+      return <Route {...r} key={r.path} />
     })}
   </Routes>
 }

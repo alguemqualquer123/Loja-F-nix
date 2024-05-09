@@ -13,34 +13,46 @@ import "tippy.js/dist/tippy.css";
 import FENIXPNG from "@app/assets/fenix.png";
 import SRVINIXPNG from "@app/assets/authores/srvinix.jpg";
 import MaterialCard from "@app/componentes/MaterialIcons/MaterialCard.jsx";
-import {
-  api,
-  config,
-  ActiveSections,
-  optionsLi,
-  optionsButtons,
-} from "@app/config.js";
+import { ControleRoles } from "@app/Server/ControleRoles/server.ts";
+import { api } from "@app/config.js";
 import { VscGithub } from "react-icons/vsc";
 import { IoLogoDiscord } from "react-icons/io5";
 import { RiInstagramFill } from "react-icons/ri";
+import { GetDataCookie, getCookie } from "@app/auth/getCookies";
+import { InstanceSettings } from "@app/Server/Auth/server";
 
 function App() {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      ControleRoles()
+    }, 5000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  useEffect(() => {
+    ControleRoles()
+  }, []);
+
   return (
-    <main className="w-screen flex flex-col justify-start items-start overflow-y-auto transition-all duration-700">
+    <main
+      className="w-screen flex flex-col justify-start items-start overflow-y-auto transition-all duration-700"
+      id="inicio"
+    >
       <img
         src={Dots}
         alt=""
         className="bg-cover bg-no-repeat absolute top-0"
         draggable={false}
       />
-      <NavBar />
+
       <motion.div
-        // initial={{ opacity: 0 }}
-        // animate={{ opacity: 1 }}
-        // exit={{ opacity: 0 }}
-        transition={{ duration: 4.5 }}
+        initial={{ opacity: 0.5 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
       >
-        <section className="w-[100vw] ml-[4rem] mt-[4rem] pb-4 pt-4 flex flex-col  justify-center items-center gap-2 p-5 transition-all animate-retivalC">
+        <section className="w-[100vw] ml-[4rem] mt-[20rem] pb-4 pt-4 flex flex-col  justify-center items-center gap-2 p-5 transition-all animate-retivalC">
           <h2 className="text-indigo-50  from-indigo-500 to-indigo-600 font-bold font-signika md:text-[24px] sm:text-[30px] lg:text-[40px] 2xl:text-[50px]">
             Olá, Seja Bem Vindo a Fênix
           </h2>
@@ -155,7 +167,7 @@ function App() {
               /> */}
             </div>
             <div
-              className="flex flex-col justify-center items-center gap-10 pb-20 pt-10"
+              className="flex flex-col justify-center items-center gap-10 pb-20 pt-10 mt-[40rem]"
               id="Contatos"
             >
               <h1 className="text-black text-[40px] font-bold uppercase drop-shadow-lg shadow-black">
@@ -163,26 +175,41 @@ function App() {
               </h1>
               <div className="flex justify-between items-center flex-row gap-4 p-2">
                 <button
-                  className="bg-gradient-to-r from-red-500 to-red-600 border-none border-transparent hover:text-black hover:shadow-black hover:shadow-1xl transition-all duration-500"
+                  className="w-[80px] h-[45px] p-1 rounded-md bg-gradient-to-r from-red-500 to-red-600 border-none border-transparent font-semibold hover:text-black hover:shadow-black hover:shadow-1xl transition-all duration-700"
                   onClick={() => window.open("https://discord.gg/2zX682sDwC")}
                 >
                   Loja
                 </button>
                 <button
-                  className="border-none hover:shadow-1xl hover:shadow-blue-gray-800 hover:text-red-700 transition-all duration-500 active:border-transparent after:border-transparent"
+                  className=" h-[45px] p-2 rounded-md  bg-black  border-none hover:shadow-1xl hover:shadow-blue-gray-800 hover:text-red-700 transition-all duration-700 active:border-transparent after:border-transparent font-semibold"
                   onClick={() => window.open("https://discord.gg/gSHUVHXNwP")}
                 >
                   Comunidade
                 </button>
-                <div className="flex justify-center items-center gap-4 p-4">
+                <div className="flex justify-center items-center gap-4">
                   <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
-                    <VscGithub className="size-8"  onClick={() => window.open("https://github.com/alguemqualquer123/")}/>
+                    <VscGithub
+                      className="size-8"
+                      onClick={() =>
+                        window.open("https://github.com/alguemqualquer123/")
+                      }
+                    />
                   </div>
                   <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
-                    <IoLogoDiscord className="size-8"  onClick={() => window.open("https://discord.gg/CwQrSypj2T")}/>
+                    <IoLogoDiscord
+                      className="size-8"
+                      onClick={() =>
+                        window.open("https://discord.gg/CwQrSypj2T")
+                      }
+                    />
                   </div>
                   <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
-                    <RiInstagramFill className="size-8"  onClick={() => window.open("https://www.instagram.com/vinix_santoos/")}/>
+                    <RiInstagramFill
+                      className="size-8"
+                      onClick={() =>
+                        window.open("https://www.instagram.com/vinix_santoos/")
+                      }
+                    />
                   </div>
                 </div>
               </div>
@@ -194,7 +221,7 @@ function App() {
           className="w-full h-full flex flex-col justify-center items-center"
           style={{
             background:
-              "linear-gradient(90.19deg, #161616 0.16%, #4b1818 50%, #a31818 95.68%);",
+              "linear-gradient(90.19deg, #161616 0.16%, #4b1818 50%, #a31818 95.68%)",
           }}
         >
           {/* <div className="w-full h-[20rem]">
@@ -205,7 +232,7 @@ function App() {
             />
           </div> */}
           <div
-            className="w-full bg-[#161111] flex flex-row justify-between items-center pb-[2rem] pt-[2rem]"
+            className="w-full bg-[#161111] flex flex-row justify-between items-center p-2"
             id="Feedbacks"
           >
             <a
@@ -215,7 +242,7 @@ function App() {
               Termos
             </a>
 
-            <div className="flex flex-col justify-center items-center gap-4 ">
+            <div className="flex flex-col justify-center items-center">
               <img src={FenixPng} alt="logo" className="w-[100px] bg-cover" />
               <span className="text-white font-bold font-signika">
                 Fênix - 2024 | Todos os direitos reservados.
@@ -239,7 +266,7 @@ function App() {
             </div>
 
             <div className="">
-              <div className="flex flex-col justify-center items-center text-[15px] mr-[14vw]  font-signika mt-8">
+              <div className="flex flex-col justify-center items-center text-[15px] mr-[14vw]  font-signika">
                 <span>Fênix Development</span>
                 <span>Todos Os Direitos Reservados.</span>
                 <span>©copyright</span>

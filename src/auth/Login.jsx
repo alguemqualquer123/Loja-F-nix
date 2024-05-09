@@ -1,35 +1,20 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { config } from '../config.js'
+import { authDiscord } from '@app/config.js'
+import { InstanceSettings } from '@app/Server/Auth/server'
 export const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const handleAuthRedirect = () => {
-      const queryParams = new URLSearchParams(window.location.hash.substring(1));
-      const accessToken = queryParams.get('access_token');
-      
-      // Obtém o cookie chamado 'user'
-      const userCookie = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('user='));
-
-      if (accessToken || userCookie) {
-        localStorage.setItem('user', accessToken || userCookie.split('=')[1]);
-        navigate("/");
-      }
-    };
-
-    window.addEventListener('hashchange', handleAuthRedirect);
-
-    return () => {
-      window.removeEventListener('hashchange', handleAuthRedirect);
-    };
-  }, [navigate]);
-
-  useEffect(() => {
-    window.location.href = config.authDiscord;
+    const queryParams = new URLSearchParams(window.location.hash.substring(1));
+    const accessToken = queryParams.get('access_token');
+    const userData = queryParams.get('user_data');
+    if (accessToken || userData) {
+      const user = userData ? JSON.parse(decodeURIComponent(userData)) : null;
+      InstanceSettings.saveUserProfile(user)
+      localStorage.setItem('user', JSON.stringify(user));
+    }
+    navigate("/");
   }, []);
-
   return <></>;
 };
