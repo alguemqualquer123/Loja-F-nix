@@ -22,7 +22,7 @@ export const Routing = () => {
       element: <Login />
     },
     {
-      path: "/*",
+      path: "*",
       element: <Return path='/' />
     },
   ]
