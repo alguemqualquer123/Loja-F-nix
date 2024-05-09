@@ -96,8 +96,10 @@ class Settings {
 
   public getUserProfile(): UserProfileType | null {
     const userString = localStorage.getItem("user");
-    const dataid = userString ? JSON.parse(userString) : null;
+    let dataid = userString ? JSON.parse(userString) : null;
     if (dataid && dataid.id) {
+      dataid.avatar = `https://cdn.discordapp.com/avatars/${dataid.id ? dataid.id : ''}/${dataid.avatar ? dataid.avatar :''}`,
+      dataid.banner =  `https://cdn.discordapp.com/banners/${dataid.id ? dataid.id : ''}/${dataid.banner ? dataid.banner : ''}`
       return dataid;
     }
     return null;

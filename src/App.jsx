@@ -39,6 +39,7 @@ function App() {
       className="w-screen flex flex-col justify-start items-start overflow-y-auto transition-all duration-700"
       id="inicio"
     >
+      <NavBar />
       <img
         src={Dots}
         alt=""
