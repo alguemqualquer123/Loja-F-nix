@@ -26,6 +26,7 @@ export const Painel = () => {
     action: string;
     icon?: string;
   }) => {
+    console.log(icon)
     return (
       <li className="w-[90%] p-4 flex flex-row gap-10 justify-center items-center hover:bg-black/20 rounded-lg">
         <Link to={`/dashboard/${action}`} className="text-black font-bold">
