@@ -1,5 +1,4 @@
 import { api } from "@app/config";
-import { useEffect, useState } from "react";
 import { InstanceSettings } from "@app/Server/Auth/server";
 
 export const ControleRoles = () => {
