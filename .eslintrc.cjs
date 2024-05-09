@@ -17,4 +17,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  "rules": {
+    "no-unused-vars": "off"
+  }
 }

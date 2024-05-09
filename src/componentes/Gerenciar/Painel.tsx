@@ -4,7 +4,7 @@ import { Route, Routes, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Pages = ({ Pagina }: { Pagina: string }) => {
-  let { GetRoute } = useParams();
+  // let { GetRoute } = useParams();
 
   return (
     <section className="w-full p-4" id="loadingPage">
