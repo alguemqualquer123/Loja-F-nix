@@ -14,7 +14,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "error",
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: false },
+      { allowConstantExport: true },
     ],
   },
 }
