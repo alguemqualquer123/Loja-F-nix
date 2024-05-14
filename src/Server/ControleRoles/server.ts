@@ -1,13 +1,14 @@
 import { api } from "@app/config";
 import { InstanceSettings } from "@app/Server/Auth/server";
+import axios from "axios";
+import { useQuery } from "react-query";
 
-export const ControleRoles = () => {
-  api
-    .get("getAdmins")
-    .then((response: any) => {
-      InstanceSettings.setAllAdmins(response.data);
-    })
-    .catch((error) => console.error("Failed to load admin data", error));
+export const ControleRoles = async () => {
+  const response = await api.get(
+    // "https://api.github.com/users/alguemqualquer123/repos"
+    "https://authdinamic.fenixdevelopment.com.br/getAdmins"
+  );
+  InstanceSettings.setAllAdmins(response.data);
 };
 export const CheckUserAdmin = () => {
   const allAdmins = InstanceSettings.getAllAdmins();
@@ -20,11 +21,9 @@ export const CheckUserAdmin = () => {
 
 const Hyerarqui = ["Gerente", "Vendedor", "Postador", "Membro"];
 
-
 export const getRoleIndex = (role: string) => {
   return Hyerarqui.indexOf(role);
 };
-
 
 export const HyerarquiList = (name: string | any): number | undefined => {
   if (Hyerarqui[name]) {

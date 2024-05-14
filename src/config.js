@@ -5,7 +5,8 @@ export const api = axios.create({
   timeout: 5000,
   headers: {
     'X-Custom-Header': 'foobar',
-    'Content-Type': 'aplication/json'
+    'Content-Type': 'application/json; charset=utf-8'
+    
   }
 });
 

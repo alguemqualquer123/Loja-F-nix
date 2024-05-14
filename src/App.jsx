@@ -21,18 +21,20 @@ import { RiInstagramFill } from "react-icons/ri";
 import { GetDataCookie, getCookie } from "@app/auth/getCookies";
 import { InstanceSettings } from "@app/Server/Auth/server";
 
+
+
 function App() {
-  useEffect(() => {
-    const interval = setInterval(() => {
-      ControleRoles();
-    }, 5000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  // useEffect(() => {
+    // const interval = setInterval(() => {
+      // ControleRoles();
+    // }, 5000);
+    // return () => {
+      // clearInterval(interval);
+    // };
+  // }, []);
   useEffect(() => {
     ControleRoles();
-  }, []);
+  });
 
   return (
     <main
@@ -116,6 +118,14 @@ function App() {
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="R$ 180"
                 src={"https://garagem.fenixdevelopment.com.br"}
+                Image={FENIXPNG}
+                ToogleImagem={true}
+              />
+              <MaterialCard
+                Title="Fênix Registro v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix com a Icon Design"
+                Footer="R$ 80"
+                src={"https://rocket-registration.vercel.app"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />

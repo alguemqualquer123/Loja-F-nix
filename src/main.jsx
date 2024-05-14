@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import "@app/css/index.css";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "@app/componentes/NavBar.jsx";
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,7 +32,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <ErrorBoundary>
         {/* <NavBar /> */}
-        <Routing />
+        <QueryClientProvider client={queryClient}>
+          <Routing />
+        </QueryClientProvider>
       </ErrorBoundary>
     </BrowserRouter>
   </React.StrictMode>
