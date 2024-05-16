@@ -19,13 +19,13 @@ const MaterialCard = ({
 }) => {
   return (
     <Card
-      className="w-[12rem] lg:w-[24rem] transition-all duration-500  lg:hover:scale-[0.76] lg:scale-[0.75] hover:shadow-2xl hover:shadow-black/20 hover:bg-gray-900/20 bg-gray-500/20 hover:text-white"
+      className="w-[10rem] h-[16rem] lg:h-auto  lg:w-[24rem] transition-all duration-500  lg:hover:scale-[0.76] lg:scale-[0.75] scale-[0.75] hover:shadow-2xl hover:shadow-black/20 hover:bg-gray-900/20 bg-gray-500/20 hover:text-white"
       draggable={false}
     >
       <CardHeader
         floated={false}
         shadow={true}
-        className="lg:h-60 h-24  flex justify-center items-center bg-gray-900/90"
+        className="lg:h-60 h-20 overflow-y-hidden overflow-x-auto  flex justify-center items-center bg-gray-900/90"
       >
         {!ToogleImagem ? (
           <iframe
@@ -58,7 +58,7 @@ const MaterialCard = ({
           {Footer}
         </Typography>
         <button
-          className="bg-black rounded-lg p-2 font-bold text-white border-none lg:mt-10 mt-4 text-[10px] lg:text-[20px]"
+          className="bg-black rounded-lg p-2 font-bold text-white border-none lg:mt-10 mt-2 text-[10px] lg:text-[20px]"
           onClick={() => window.open(`${src}`)}
         >
           Interagir

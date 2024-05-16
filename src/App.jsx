@@ -86,7 +86,7 @@ function App() {
             <span className="text-black md:text-[24px] sm:text-[50px] lg:text-[40px] 2xl:text-[50px] font-bold">
               Clique no botão de Interagir
             </span>
-            <div className="bg-white grid lg:grid-cols-3 lg:pb-10 lg:pt-10 lg:gap-4 lg:p-20 mt-20 gap-20 justify-center items-center">
+            <div className="bg-white grid grid-cols-2 lg:grid-cols-3 lg:pb-10 lg:pt-10 lg:gap-4 lg:p-20 mt-20 justify-center items-center">
               <MaterialCard
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
@@ -187,7 +187,7 @@ function App() {
               /> */}
             </div>
             <div
-              className="flex flex-col justify-center items-center gap-10 pb-20 pt-10 mt-[40rem]"
+              className="flex flex-col justify-center items-center gap-10 pb-20 pt-10 lg:mt-[40rem] mt-[5rem]"
               id="Contatos"
             >
               <h1 className="text-black lg:text-[40px] font-bold uppercase drop-shadow-lg shadow-black">
