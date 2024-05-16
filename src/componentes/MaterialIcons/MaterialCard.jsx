@@ -19,13 +19,13 @@ const MaterialCard = ({
 }) => {
   return (
     <Card
-      className="w-[24rem] transition-all duration-500  hover:scale-[0.76] scale-[0.75] hover:shadow-2xl hover:shadow-black/20 hover:bg-gray-900/20 hover:text-white"
+      className="w-[12rem] lg:w-[24rem] transition-all duration-500  lg:hover:scale-[0.76] lg:scale-[0.75] hover:shadow-2xl hover:shadow-black/20 hover:bg-gray-900/20 bg-gray-500/20 hover:text-white"
       draggable={false}
     >
       <CardHeader
         floated={false}
         shadow={true}
-        className="h-60 flex justify-center items-center bg-gray-900/90"
+        className="lg:h-60 h-24  flex justify-center items-center bg-gray-900/90"
       >
         {!ToogleImagem ? (
           <iframe
@@ -43,62 +43,27 @@ const MaterialCard = ({
         )}
       </CardHeader>
       <CardBody className="text-center ">
-        <Typography variant="h4" color="blue-gray" className="mb-2">
+        <Typography variant="h4" color="blue-gray" className="mb-2 text-[10px] lg:text-[20px]">
           {Title}
         </Typography>
         <Typography
           variant="h6"
           color="blue-gray"
-          className="text-black font-normal"
+          className="text-black font-normal text-[10px] lg:text-[20px]"
           textGradient
         >
           {Text}
         </Typography>
-        <Typography color="blue-gray" className="font-medium" textGradient>
+        <Typography color="blue-gray" className="font-medium text-[10px] lg:text-[20px]" textGradient>
           {Footer}
         </Typography>
         <button
-          className="bg-black rounded-lg p-2 font-bold text-white border-none mt-10"
+          className="bg-black rounded-lg p-2 font-bold text-white border-none lg:mt-10 mt-4 text-[10px] lg:text-[20px]"
           onClick={() => window.open(`${src}`)}
         >
           Interagir
         </button>
       </CardBody>
-      <CardFooter className="flex justify-center gap-7 pt-2">
-        <Tooltip content="Like">
-          <Typography
-            as="a"
-            href="#facebook"
-            variant="lead"
-            color="blue"
-            textGradient
-          >
-            <i className="fab fa-facebook" />
-          </Typography>
-        </Tooltip>
-        <Tooltip content="Follow">
-          <Typography
-            as="a"
-            href="#twitter"
-            variant="lead"
-            color="light-blue"
-            textGradient
-          >
-            <i className="fab fa-twitter" />
-          </Typography>
-        </Tooltip>
-        <Tooltip content="Follow">
-          <Typography
-            as="a"
-            href="#instagram"
-            variant="lead"
-            color="purple"
-            textGradient
-          >
-            <i className="fab fa-instagram" />
-          </Typography>
-        </Tooltip>
-      </CardFooter>
     </Card>
   );
 };

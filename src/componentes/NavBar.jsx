@@ -31,26 +31,26 @@ export const NavBar = () => {
   };
   return (
     <section
-      className="w-full fixed flex flex-row justify-between items-center pl-16 pr-16  font-bold z-50 "
-      style={{
-        background:
-          "linear-gradient(90.19deg, rgba(0,0,0,0.4) 0.16%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 95.68%)",
-      }}
+      className="w-full lg:fixed flex flex-col lg:flex-row lg:justify-between justify-center items-center lg:pl-16 lg:pr-16 lg:p-6 lg:text-black  font-bold z-50 "
+      // style={{
+      //   background:
+      //     "linear-gradient(90.19deg, rgba(0,0,0,0.4) 0.16%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 95.68%)",
+      // }}
     >
       <Link to="/" className="flex flex-row justify-center items-center">
         <div className="flex flex-row justify-center items-center gap-4">
           <img
             src={FenixPng}
             alt="logo"
-            className="w-[70px] hover:scale-2 hover:animate-tremulo bg-cover"
+            className="w-[50px] lg:w-[50px] hover:scale-2 hover:animate-tremulo bg-cover"
           ></img>
 
-          <p className="text-white text-[20px]  md:text-[20px] xl:text-[20px]  sm:text-[20px]  lg:text-[10px] font-bold text-ellipsis hover:cursor-pointer transition-all transform  hover-underline-animation">
+          <p className="text-white text-[15px]  lg:text-[20px] font-bold text-ellipsis hover:cursor-pointer transition-all transform  hover-underline-animation">
             Fênix Development
           </p>
         </div>
       </Link>
-      <div className="flex flex-row justify-center items-center gap-10 ml-[25vw]">
+      <div className="flex flex-col text-[12px] lg:text-[15px] lg:flex-row justify-center items-center gap-2 lg:gap-10 ">
         <a
           onClick={() => {
             if (location.pathname === "/") {
@@ -62,31 +62,31 @@ export const NavBar = () => {
               }, 2000);
             }
           }}
-          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+          className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Inicio
         </a>
         <a
           onClick={() => scrollToSection("produtos")}
-          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+          className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Produtos
         </a>
         <a
           onClick={() => scrollToSection("Contatos")}
-          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+          className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Contatos
         </a>
         <a
           onClick={() => scrollToSection("Feedbacks")}
-          className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+          className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
         >
           Feedbacks
         </a>
         {!InstanceSettings.getUserProfile() ? (
           <a
-            className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem cursor-not-allowed"
+            className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem cursor-not-allowed"
             // href="/login"
             onClick={() => {
               window.location.href = authDiscord;
@@ -96,7 +96,7 @@ export const NavBar = () => {
           </a>
         ) : ChequeAdmin ? (
           <a
-            className="text-white text-[20px] font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem cursor-not-allowed"
+            className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem cursor-not-allowed"
             href="/dashboard"
           >
             Gerenciar

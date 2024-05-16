@@ -12,8 +12,27 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
     extend: {
+      screens: {
+
+        'sm': '640px', // Telas pequenas, como celulares em modo paisagem (iPhone SE)
+        'md': '768px', // Telas médias, como tablets (iPad)
+        'lg': '1024px', // Telas grandes, como laptops e desktops
+        'xl': '1280px', // Telas extra grandes, como monitores de desktop maiores
+        '2xl': '1536px', // Telas extra extra grandes, como monitores maiores
+        'cell': '390px', // Especificamente para uma tela de celular genérica
+        'tablet': '640px', // Especificamente para uma tela de tablet genérica
+        'laptop': '1024px', // Especificamente para uma tela de laptop genérica
+        'desktop': '1280px', // Especificamente para uma tela de desktop genérica
+      },
       colors: {
         "regal-blue": "#243c5a",
+      },
+      fontSize: {
+        'sm': '0.875rem',
+        'base': '0.5rem',
+        'lg': '1.25rem',
+        'xl': '1.5rem',
+        'mobiletext': '1.5rem',
       },
       fontFamily: {
         signika: ['"Signika Negative"', "sans-serif"],
@@ -26,6 +45,9 @@ export default {
         retivalB: "retivalB 2.5s  ease-in-out",
         retivalC: "retivalC 2.5s  ease-in-out",
         DropItem: "DropItem 1.5s  ease-in-out",
+      },
+      backgroundColor: {
+        headerlinear: "linear-gradient(90.19deg, rgba(0,0,0,0.4) 0.16%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 95.68%)"
       },
       keyframes: {
         opacityAnim: {

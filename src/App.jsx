@@ -21,16 +21,14 @@ import { RiInstagramFill } from "react-icons/ri";
 import { GetDataCookie, getCookie } from "@app/auth/getCookies";
 import { InstanceSettings } from "@app/Server/Auth/server";
 
-
-
 function App() {
   // useEffect(() => {
-    // const interval = setInterval(() => {
-      // ControleRoles();
-    // }, 5000);
-    // return () => {
-      // clearInterval(interval);
-    // };
+  // const interval = setInterval(() => {
+  // ControleRoles();
+  // }, 5000);
+  // return () => {
+  // clearInterval(interval);
+  // };
   // }, []);
   useEffect(() => {
     ControleRoles();
@@ -38,7 +36,7 @@ function App() {
 
   return (
     <main
-      className="w-screen flex flex-col justify-start items-start overflow-y-auto transition-all duration-700"
+      className="w-screen flex flex-col justify-start items-center overflow-y-auto transition-all duration-700"
       id="inicio"
     >
       <NavBar />
@@ -55,31 +53,40 @@ function App() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <section className="w-full ml-[4rem] mb-[100vh] mt-[30vh] ">
-          <div className="flex flex-col  justify-center items-center gap-2 transition-all animate-retivalC">
-            <h2 className="text-indigo-50  from-indigo-500 to-indigo-600 font-bold font-signika md:text-[24px] sm:text-[30px] lg:text-[40px] 2xl:text-[50px]">
+        <section className="w-full lg:mb-[10vh] lg:mt-[60vh]  mt-[10vh] ">
+          <div
+            className="flex flex-col  justify-start items-center gap-2 transition-all animate-retivalC
+          text-[10px] lg:text-[25px] 
+          "
+          >
+            <h2 className="text-white  from-red-500 to-black font-bold font-signika ">
               Olá, Seja Bem Vindo a Fênix
             </h2>
-            <h2 className="text-white text-[20px] font-semibold font-signika md:text-[24px] sm:text-[15px] lg:text-[20px] 2xl:text-[25px]">
-              Esta procurando novos scripts para a sua cidade inovadores e que
-              vai acrescentar bastante na sua cidade ?
-            </h2>
+            <div className="w-full flex items-center justify-center">
+              <h2 className="text-white font-semibold font-signika">
+                Esta procurando novos scripts para a sua cidade inovadores e que
+                vai
+                <h2 className="text-white font-semibold font-signika">
+                  acrescentar bastante na sua cidade ?
+                </h2>
+              </h2>
+            </div>
           </div>
         </section>
 
-        <section className="w-full h-full mt-[20rem] flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
+        <section className="w-full h-full mt-[18rem] lg:mt-[20rem]  flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
           <img src={Ondas} alt="" />
           <div
             className="w-full bg-white flex flex-col justify-center items-center"
             id="produtos"
           >
-            <h1 className="text-black md:text-[24px] sm:text-[50px] lg:text-[40px] 2xl:text-[50px] font-bold">
+            <h1 className="text-black text-[14px] lg:text-[50px] font-bold">
               Temos Alguns de nossos Resources Em Exibição !!
             </h1>
             <span className="text-black md:text-[24px] sm:text-[50px] lg:text-[40px] 2xl:text-[50px] font-bold">
               Clique no botão de Interagir
             </span>
-            <div className="bg-white grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4  pb-10 pt-10 gap-4 justify-center items-center">
+            <div className="bg-white grid lg:grid-cols-3 lg:pb-10 lg:pt-10 lg:gap-4 lg:p-20 mt-20 gap-20 justify-center items-center">
               <MaterialCard
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
@@ -183,42 +190,42 @@ function App() {
               className="flex flex-col justify-center items-center gap-10 pb-20 pt-10 mt-[40rem]"
               id="Contatos"
             >
-              <h1 className="text-black text-[40px] font-bold uppercase drop-shadow-lg shadow-black">
+              <h1 className="text-black lg:text-[40px] font-bold uppercase drop-shadow-lg shadow-black">
                 Entre Em Contato Em Nosso Discord !!
               </h1>
-              <div className="flex justify-between items-center flex-row gap-4 p-2">
+              <div className="w-screen flex justify-center items-center flex-row  gap-2 lg:gap-10">
                 <button
-                  className="w-[80px] h-[45px] p-1 rounded-md bg-gradient-to-r from-red-500 to-red-600 border-none border-transparent font-semibold hover:text-black hover:shadow-black hover:shadow-1xl transition-all duration-700"
+                  className="w-[60px] lg:w-[80px] lg:h-[45px] h-[40px] text-[10px] lg:text-[20px] p-1 rounded-md bg-gradient-to-r from-red-500 to-red-600 border-none border-transparent font-semibold hover:text-black hover:shadow-black hover:shadow-1xl transition-all duration-700"
                   onClick={() => window.open("https://discord.gg/2zX682sDwC")}
                 >
                   Loja
                 </button>
                 <button
-                  className=" h-[45px] p-2 rounded-md  bg-black  border-none hover:shadow-1xl hover:shadow-blue-gray-800 hover:text-red-700 transition-all duration-700 active:border-transparent after:border-transparent font-semibold"
+                  className="lg:h-[46px] h-[40px] text-[10px] lg:text-[20px] p-2  rounded-md  bg-black  border-none hover:shadow-1xl hover:shadow-blue-gray-800 hover:text-red-700 transition-all duration-700 active:border-transparent after:border-transparent font-semibold"
                   onClick={() => window.open("https://discord.gg/gSHUVHXNwP")}
                 >
                   Comunidade
                 </button>
                 <div className="flex justify-center items-center gap-4">
-                  <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
+                  <div className="w-[50px] h-[40px] bg-black/70 rounded-lg p-1 hover:border  hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
                     <VscGithub
-                      className="size-8"
+                      className="size-6 "
                       onClick={() =>
                         window.open("https://github.com/alguemqualquer123/")
                       }
                     />
                   </div>
-                  <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
+                  <div className="w-[50px] h-[40px] bg-black/70 rounded-lg p-1 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
                     <IoLogoDiscord
-                      className="size-8"
+                      className="size-6 "
                       onClick={() =>
                         window.open("https://discord.gg/CwQrSypj2T")
                       }
                     />
                   </div>
-                  <div className="bg-black/70 rounded-lg p-2 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white">
+                  <div className="w-[50px] h-[40px] bg-black/70 rounded-lg p-1 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
                     <RiInstagramFill
-                      className="size-8"
+                      className="size-6 "
                       onClick={() =>
                         window.open("https://www.instagram.com/vinix_santoos/")
                       }
@@ -245,19 +252,23 @@ function App() {
             />
           </div> */}
           <div
-            className="w-full bg-[#161111] flex flex-row justify-between items-center p-2"
+            className="w-full bg-[#161111] flex lg:flex-row flex-col gap-10 lg:gap-0 lg:justify-between lg:pr-10 lg:pl-10 items-center lg:pt-10 lg:pb-10"
             id="Feedbacks"
           >
             <a
-              className="ml-[16rem] font-bold text-[20px] text-white hover:text-white  mt-[2rem]"
+              className="font-bold lg:text-[20px] text-white hover:text-white  mt-[2rem]"
               href="#termos"
             >
               Termos
             </a>
 
             <div className="flex flex-col justify-center items-center">
-              <img src={FenixPng} alt="logo" className="w-[100px] bg-cover" />
-              <span className="text-white font-bold font-signika">
+              <img
+                src={FenixPng}
+                alt="logo"
+                className="lg:w-[100px] w-[50px] bg-cover"
+              />
+              <span className="text-white font-bold font-signika text-[10px] lg:text-[10px]">
                 Fênix - 2024 | Todos os direitos reservados.
               </span>
             </div>
@@ -278,17 +289,15 @@ function App() {
               /> */}
             </div>
 
-            <div className="">
-              <div className="flex flex-col justify-center items-center text-[15px] mr-[14vw]  font-signika">
-                <span>Fênix Development</span>
-                <span>Todos Os Direitos Reservados.</span>
-                <span>©copyright</span>
-                <span>Production By Fênix Development</span>
-              </div>
+            <div className="flex flex-col justify-center items-center text-[10px] lg:text-[15px] lg:mr-[14vw] mb-4 lg:mg-0  font-signika">
+              <span>Fênix Development</span>
+              <span>Todos Os Direitos Reservados.</span>
+              <span>©copyright</span>
+              <span>Production By Fênix Development</span>
             </div>
           </div>
         </section>
-        <div className="fixed bottom-[1rem] left-[1rem] flex flex-col justify-center items-center font-signika text-[20px] text-gray-500 z-[50]">
+        <div className="fixed bottom-[1rem] left-[1rem] flex flex-col justify-center items-center font-signika text-[8px] lg:text-[20px] text-gray-500 z-[50]">
           <svg
             stroke="currentColor"
             fill="currentColor"
