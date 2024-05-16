@@ -53,7 +53,7 @@ function App() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <section className="w-full lg:mb-[10vh] lg:mt-[60vh]  mt-[10vh] ">
+        <section className="w-full lg:mb-[10vh] lg:mt-[20vh]  mt-[10vh] ">
           <div
             className="flex flex-col  justify-start items-center gap-2 transition-all animate-retivalC
           text-[10px] lg:text-[25px] 
