@@ -31,7 +31,7 @@ export const NavBar = () => {
   };
   return (
     <section
-      className="w-full lg:fixed flex flex-col lg:flex-row lg:justify-between justify-center items-center lg:pl-16 lg:pr-16 lg:p-6 lg:text-black  font-bold z-50 "
+      className="w-full lg:fixed flex flex-col lg:flex-row lg:justify-between justify-center items-center lg:pl-16 lg:pr-16 lg:p-6 p-6 lg:text-black  font-bold z-50  bg-black lg:bg-transparent"
       // style={{
       //   background:
       //     "linear-gradient(90.19deg, rgba(0,0,0,0.4) 0.16%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 95.68%)",
@@ -50,7 +50,7 @@ export const NavBar = () => {
           </p>
         </div>
       </Link>
-      <div className="flex flex-col text-[12px] lg:text-[15px] lg:flex-row justify-center items-center gap-2 lg:gap-10 ">
+      <div className="grid grid-cols-3 gap-4 mt-8 lg:flex text-[12px] lg:text-[15px] lg:flex-row justify-center items-center lg:gap-10 ">
         <a
           onClick={() => {
             if (location.pathname === "/") {

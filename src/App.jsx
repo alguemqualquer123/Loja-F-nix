@@ -46,17 +46,16 @@ function App() {
         className="bg-cover bg-no-repeat absolute top-0"
         draggable={false}
       />
-
       <motion.div
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <section className="w-full lg:mb-[10vh] lg:mt-[20vh]  mt-[10vh] ">
+        <section className="w-full lg:mb-[10vh] lg:mt-[50vh]  mt-[20vh] ">
           <div
-            className="flex flex-col  justify-start items-center gap-2 transition-all animate-retivalC
-          text-[10px] lg:text-[25px] 
+            className="flex flex-col  justify-start items-center lg:gap-2 gap-4 transition-all animate-retivalC
+          text-[8px] lg:text-[25px] 
           "
           >
             <h2 className="text-white  from-red-500 to-black font-bold font-signika ">
@@ -72,6 +71,7 @@ function App() {
               </h2>
             </div>
           </div>
+
         </section>
 
         <section className="w-full h-full mt-[18rem] lg:mt-[20rem]  flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
@@ -195,37 +195,37 @@ function App() {
               </h1>
               <div className="w-screen flex justify-center items-center flex-row  gap-2 lg:gap-10">
                 <button
-                  className="w-[60px] lg:w-[80px] lg:h-[45px] h-[40px] text-[10px] lg:text-[20px] p-1 rounded-md bg-gradient-to-r from-red-500 to-red-600 border-none border-transparent font-semibold hover:text-black hover:shadow-black hover:shadow-1xl transition-all duration-700"
+                  className="w-[60px] lg:w-[80px]  h-[30px] text-[8px] lg:h-[45px] lg:text-[12px] p-1 rounded-md bg-gradient-to-r from-red-500 to-red-600 border-none border-transparent font-semibold hover:text-black hover:shadow-black hover:shadow-1xl transition-all duration-700"
                   onClick={() => window.open("https://discord.gg/2zX682sDwC")}
                 >
                   Loja
                 </button>
                 <button
-                  className="lg:h-[46px] h-[40px] text-[10px] lg:text-[20px] p-2  rounded-md  bg-black  border-none hover:shadow-1xl hover:shadow-blue-gray-800 hover:text-red-700 transition-all duration-700 active:border-transparent after:border-transparent font-semibold"
+                  className="lg:h-[46px] h-[30px] text-[8px] lg:text-[12px] p-2  rounded-md  bg-black  border-none hover:shadow-1xl hover:shadow-blue-gray-800 hover:text-red-700 transition-all duration-700 active:border-transparent after:border-transparent font-semibold"
                   onClick={() => window.open("https://discord.gg/gSHUVHXNwP")}
                 >
                   Comunidade
                 </button>
                 <div className="flex justify-center items-center gap-4">
-                  <div className="w-[50px] h-[40px] bg-black/70 rounded-lg p-1 hover:border  hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
+                  <div className="w-[45px] lg:w-[50px] h-[30px] lg:h-[45px] bg-black/70 rounded-lg p-1 hover:border  hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
                     <VscGithub
-                      className="size-6 "
+                      className="size-4 lg:size-5"
                       onClick={() =>
                         window.open("https://github.com/alguemqualquer123/")
                       }
                     />
                   </div>
-                  <div className="w-[50px] h-[40px] bg-black/70 rounded-lg p-1 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
+                  <div className="w-[45px] lg:w-[50px] h-[30px] lg:h-[45px] bg-black/70 rounded-lg p-1 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
                     <IoLogoDiscord
-                      className="size-6 "
+                      className="size-4 lg:size-5"
                       onClick={() =>
                         window.open("https://discord.gg/CwQrSypj2T")
                       }
                     />
                   </div>
-                  <div className="w-[50px] h-[40px] bg-black/70 rounded-lg p-1 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
+                  <div className="w-[45px] lg:w-[50px] h-[30px] lg:h-[45px] bg-black/70 rounded-lg p-1 hover:border hover:border-indigo-500 duration-100 text-black hover:text-white flex justify-center items-center">
                     <RiInstagramFill
-                      className="size-6 "
+                      className="size-4 lg:size-5"
                       onClick={() =>
                         window.open("https://www.instagram.com/vinix_santoos/")
                       }
@@ -252,15 +252,15 @@ function App() {
             />
           </div> */}
           <div
-            className="w-full bg-[#161111] flex lg:flex-row flex-col gap-10 lg:gap-0 lg:justify-between lg:pr-10 lg:pl-10 items-center lg:pt-10 lg:pb-10"
+            className="w-full bg-[#161111] flex lg:flex-row flex-col gap-4 lg:gap-0 lg:justify-between lg:pr-20 lg:pl-20 items-center lg:pt-10 pt-4 pb-4 lg:pb-10"
             id="Feedbacks"
           >
-            <a
+            {/* <a
               className="font-bold lg:text-[20px] text-white hover:text-white  mt-[2rem]"
               href="#termos"
             >
               Termos
-            </a>
+            </a> */}
 
             <div className="flex flex-col justify-center items-center">
               <img
@@ -274,13 +274,14 @@ function App() {
             </div>
 
             <div className="w-auto h-auto flex items-center -space-x-4 gap-1 pt-2 pb-2 pr-2 pl-2">
-              <Tippy content="SR VINIX">
-                <img
-                  alt="user 1"
-                  className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full h-[30px] w-[30px] transition-all duration-1000 hover:scale-[1.1]"
-                  src={SRVINIXPNG}
-                />
-              </Tippy>
+              {/* <Tippy content="SR VINIX">
+                  <img
+                    alt="user 1"
+                    className="border border-red-900 shadow-xl shadow-red-900/20 ring-4 ring-red-500/30 hover:z-10 focus:z-10 rounded-full h-[30px] w-[30px] transition-all duration-1000 hover:scale-[1.1]"
+                    src={SRVINIXPNG}
+                  />
+                </Tippy> */}
+              {/* </div> */}
               {/* <img
                 variant="circular"
                 alt="user 1"
