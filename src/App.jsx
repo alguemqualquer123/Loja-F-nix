@@ -136,6 +136,14 @@ function App() {
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />
+              <MaterialCard
+                Title="Fênix Sistema de Relacionamento v1.0"
+                Text="Essa é a mais nova exclusividade da Fênix com a Icon Design"
+                Footer="R$ 40"
+                src={"https://relac-git-main-sr-vinixs-projects.vercel.app/"}
+                Image={FENIXPNG}
+                ToogleImagem={true}
+              />
               {/* <MaterialCard
                 Title="Quantic-Phone v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
