@@ -86,6 +86,14 @@ function App() {
               Clique no botão de Interagir
             </span>
             <div className="bg-white grid grid-cols-2 lg:grid-cols-4 lg:pb-14 lg:pt-10 lg:p-20 mt-20 justify-center items-center">
+            <MaterialCard
+                Title="Fênix Sistema de Liberação id Asgard 🍀"
+                Text="Essa é a mais nova exclusividade da Fênix com a Icon Design"
+                Footer="R$ 80"
+                src={"https://liberacaodc.fenixdevelopment.com.br/"}
+                Image={FENIXPNG}
+                ToogleImagem={true}
+              />
               <MaterialCard
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
@@ -143,14 +151,7 @@ function App() {
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />
-              <MaterialCard
-                Title="Fênix Sistema de Liberação id Asgard 🍀"
-                Text="Essa é a mais nova exclusividade da Fênix com a Icon Design"
-                Footer="R$ 80"
-                src={"https://liberacaodc.fenixdevelopment.com.br/"}
-                Image={FENIXPNG}
-                ToogleImagem={true}
-              />
+         
               {/* <MaterialCard
                 Title="Quantic-Phone v1.0"
                 Text="Essa é a mais nova exclusividade da Fênix"
