@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: 'https://authdinamic.fenixdevelopment.com.br/',
-  baseURL: "http://localhost:3000/",
+  baseURL: 'https://authdinamic.fenixdevelopment.com.br/',
+  // baseURL: "http://localhost:3000/",
   timeout: 5000,
   headers: {
     "X-Custom-Header": "foobar",
@@ -14,16 +14,16 @@ export const Post = (
   route: string,
   params: any,
   finallyz: (data: boolean) => void,
-  invalid: (data: any) => void,
+  _invalid: (data: any) => void,
   result: (data: any) => void
 ) => {
   api
     .post(`${route}`, { params: params })
-    .then((response) => {
+    .then((response: { data: any; }) => {
       console.log(response.data);
       result(response.data);
     })
-    .catch((error) => {
+    .catch((error: { response: { data: { error: any; }; }; }) => {
       finallyz(true);
       result(error.response.data.error);
       return error;
