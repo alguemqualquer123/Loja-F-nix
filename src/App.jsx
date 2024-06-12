@@ -71,7 +71,6 @@ function App() {
               </h2>
             </div>
           </div>
-
         </section>
 
         <section className="w-full h-full mt-[18rem] lg:mt-[20rem]  flex flex-col justify-center items-center transition-all animate-retivalB duration-1000">
@@ -86,7 +85,7 @@ function App() {
             <span className="text-black md:text-[24px] sm:text-[50px] lg:text-[40px] 2xl:text-[50px] font-bold">
               Clique no botão de Interagir
             </span>
-            <div className="bg-white grid grid-cols-2 lg:grid-cols-3 lg:pb-10 lg:pt-10 lg:gap-4 lg:p-20 mt-20 justify-center items-center">
+            <div className="bg-white grid grid-cols-2 lg:grid-cols-4 lg:pb-14 lg:pt-10 lg:p-20 mt-20 justify-center items-center">
               <MaterialCard
                 Title="Quantic-Phone v1.0 | em desenvolvimento !!"
                 Text="Essa é a mais nova exclusividade da Fênix"
@@ -141,6 +140,14 @@ function App() {
                 Text="Essa é a mais nova exclusividade da Fênix com a Icon Design"
                 Footer="R$ 40"
                 src={"https://relac-git-main-sr-vinixs-projects.vercel.app/"}
+                Image={FENIXPNG}
+                ToogleImagem={true}
+              />
+              <MaterialCard
+                Title="Fênix Sistema de Liberação id Asgard 🍀"
+                Text="Essa é a mais nova exclusividade da Fênix com a Icon Design"
+                Footer="R$ 80"
+                src={"https://liberacaodc.fenixdevelopment.com.br/"}
                 Image={FENIXPNG}
                 ToogleImagem={true}
               />
