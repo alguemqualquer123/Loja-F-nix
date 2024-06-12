@@ -57,7 +57,7 @@ export const Get = (
       result(response.data);
       return response.data;
     })
-    .catch((error) => {
+    .catch((error: { response: { data: { error: any; }; }; }) => {
       invalid(error.response.data.error);
       finallyz(true);
       return error;
