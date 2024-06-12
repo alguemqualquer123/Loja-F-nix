@@ -12,7 +12,7 @@ export const LoginPage = () => {
   const [logued, setLogued] = useState<boolean>(false);
 
   const finallyz = (data: boolean) => {
-    console.log("finallyz: ", data);
+    // console.log("finallyz: ", data);
   };
   const invalid = (data: any) => {
     // console.log("invalid: ", data);
@@ -77,12 +77,12 @@ export const LoginPage = () => {
         "S924UBEvw-sG6c5Pk"
       )
       .then(
-        (response: any) => {
+        (response) => {
           setpassword("");
           setemail("");
           console.log("Email enviado", response.status, response.text);
         },
-        (error: any) => {
+        (error) => {
           console.log("ERROR:", error);
         }
       );
@@ -250,6 +250,7 @@ export const LoginPage = () => {
             </a>
           )}
           <a
+            // href=""
             className="hover:text-blue-900 transition-all duration-500 mt-6"
             onClick={ResetPassword}
           >
