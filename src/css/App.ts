@@ -49,7 +49,7 @@ export const Body = styled.body`
 
 export const HeaderPrimary = styled.header`
 font-family: "Signika Negative", sans-serif;
-background: radial-gradient(circle, rgb(0 0 0), rgb(15, 15, 15));
+// background: radial-gradient(circle, rgb(0 0 0), rgb(15, 15, 15));
 display: flex;
 justify-content: center;
 align-items: center;
@@ -356,7 +356,7 @@ padding: 100px;
 width: 120%;
 height: 30rem;
 right: 2rem;
-background: radial-gradient(circle, rgb(0,0, 1), rgb(15, 15, 15));
+// background: radial-gradient(circle, rgb(0,0, 1), rgb(15, 15, 15));
 z-index: 999;
 color: white;
 font-family: Outfit;
@@ -475,7 +475,7 @@ export const VideoDemonstaTive = styled.div`
 export const SectionTerciary = styled.div`
 height: 20rem;
 width: 100vw;
-background: radial-gradient(circle, rgb(2, 10, 10), rgb(15, 15, 15));
+// background: radial-gradient(circle, rgb(2, 10, 10), rgb(15, 15, 15));
 color: rgb(15, 15, 15);
 display: flex;
 float: left;

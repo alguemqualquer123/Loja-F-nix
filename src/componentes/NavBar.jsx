@@ -9,11 +9,17 @@ import { CheckUserAdmin } from "@app/Server/ControleRoles/server.ts";
 
 export const NavBar = () => {
   const [ChequeAdmin, setChequeAdmin] = useState(false);
+  const [isLogin, setLogin] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
+      if (InstanceSettings.Logued()) {
+        setLogin(true);
+      } else {
+        setLogin(false);
+      }
       const isAdmin = CheckUserAdmin();
       setChequeAdmin(isAdmin);
     }, 1);
@@ -84,7 +90,23 @@ export const NavBar = () => {
         >
           Feedbacks
         </a>
-        {!InstanceSettings.getUserProfile() ? (
+        {!isLogin && (
+          <a
+            href="/login"
+            className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+          >
+            Login
+          </a>
+        )}
+        {isLogin && (
+          <a
+            href="/dashboard"
+            className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem"
+          >
+            dashboard
+          </a>
+        )}
+        {/* {!InstanceSettings.getUserProfile() ? (
           <a
             className="font-bold hover:text-red-700 duration-500 hover:cursor-pointer transition-all transform translate-x-0 hover-underline-animation animate-DropItem cursor-not-allowed"
             // href="/login"
@@ -101,7 +123,7 @@ export const NavBar = () => {
           >
             Gerenciar
           </a>
-        ) : null}
+        ) : null} */}
       </div>
     </section>
   );

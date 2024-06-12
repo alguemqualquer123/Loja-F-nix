@@ -13,7 +13,7 @@ export default {
   theme: {
     extend: {
       screens: {
-
+        
         'sm': '640px', // Telas pequenas, como celulares em modo paisagem (iPhone SE)
         'md': '768px', // Telas médias, como tablets (iPad)
         'lg': '1024px', // Telas grandes, como laptops e desktops
@@ -23,6 +23,17 @@ export default {
         'tablet': '640px', // Especificamente para uma tela de tablet genérica
         'laptop': '1024px', // Especificamente para uma tela de laptop genérica
         'desktop': '1280px', // Especificamente para uma tela de desktop genérica
+      },
+      borderWidth: {
+        '1rem': '1rem',
+      },
+      borderRadius: {
+        custom: '20px',
+        customLft: '20px 20px 0px 20px',
+        ss: '50px 50px 50px 50px',
+      },
+      border: {
+        bcustom: "border: 1px solid #000;"
       },
       colors: {
         "regal-blue": "#243c5a",
@@ -36,6 +47,7 @@ export default {
       },
       fontFamily: {
         signika: ['"Signika Negative"', "sans-serif"],
+        lalezar: ['Lalezar', 'sans-serif'],
       },
       animation: {
         tremulo: "tremor 1.5s infinite cubic-bezier(.36,.07,.19,.97) both",
@@ -46,8 +58,15 @@ export default {
         retivalC: "retivalC 2.5s  ease-in-out",
         DropItem: "DropItem 1.5s  ease-in-out",
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(122deg, #2B2B2B 41.25%, #909090 166.73%)',
+      },
+      borderRadius: {
+        '20px': '20px',
+      },
       backgroundColor: {
-        headerlinear: "linear-gradient(90.19deg, rgba(0,0,0,0.4) 0.16%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 95.68%)"
+        headerlinear: "linear-gradient(90.19deg, rgba(0,0,0,0.4) 0.16%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 95.68%)",
+        // 'custom-gradient': 'linear-gradient(122deg, #2B2B2B 41.25%, #909090 166.73%)',
       },
       keyframes: {
         opacityAnim: {

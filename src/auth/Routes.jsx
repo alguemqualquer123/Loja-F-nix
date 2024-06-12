@@ -2,21 +2,22 @@ import { Routes, Route } from "react-router-dom";
 import App from "@app/App.jsx";
 import { Painel } from "@app/componentes/Gerenciar/Painel";
 import { Return } from "./ReturnHome.jsx";
-import { Login } from "./Login.jsx";
+import { LoginPage } from "./LoginPage";
 import "@app/css/index.css";
 export const Routing = () => {
   const availableRoutes = [
     {
-      path: "/*",
+      path: "/",
       element: <App />,
     },
     {
-      path: "/dashboard/*",
+      path: "/dashboard",
       element: <Painel />,
     },
     {
       path: "/login",
-      element: <Login />,
+      element: <LoginPage />,
+      // element: <Login />,
     },
     {
       path: "/*",

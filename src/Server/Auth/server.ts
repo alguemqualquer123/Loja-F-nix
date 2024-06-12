@@ -35,6 +35,9 @@ export interface AllAdminsType {
 
 class Settings {
   private static _instance: Settings;
+  private isLogued: boolean;
+  private email: string;
+  private password: string;
   public UserProfile: UserProfileType = {
     id: "",
     username: "",
@@ -56,7 +59,11 @@ class Settings {
   };
   public AllAdmins: AllAdminsType[] | any = [];
 
-  private constructor() {}
+  private constructor() {
+    this.isLogued = false;
+    this.email = "";
+    this.password = "";
+  }
 
   public static getInstance(): Settings {
     if (!Settings._instance) {
@@ -74,6 +81,46 @@ class Settings {
       this.AllAdmins = admins;
     }
   }
+
+  /////  SYSTEM LOGIN EMAIL AND PASSWORD  ////////
+
+  /////  IS ACCOUNT LOGUED  ////////
+  public Logued(): boolean {
+    return this.isLogued;
+  }
+
+  /////  SET EMAIL AND PASSWORD  ////////
+  public clearLogin(email: string): void {
+    if (this.isLogued && this.email === email) {
+      this.email = "";
+      this.password = "";
+      this.isLogued = false;
+    }
+  }
+  /////  SET EMAIL AND PASSWORD  ////////
+  public setLogin(email: string, password: string): boolean {
+    if (!this.isLogued) {
+      this.email = email;
+      this.password = password;
+      this.isLogued = true;
+      return this.isLogued;
+    }
+    return true;
+  }
+
+  /////  GET EMAIL AND PASSWORD  ////////
+  public getLogin(email: string, password: string): any[] {
+    if (this.isLogued) {
+      const table = [];
+      table.push({
+        email: email,
+        password: password,
+      });
+      return table;
+    }
+    return [];
+  }
+  /////  /////////////////////////  ////////
 
   public getAllAdmins() {
     return this.AllAdmins;
