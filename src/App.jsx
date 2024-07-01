@@ -84,9 +84,9 @@ function App() {
             </h1>
             <span className="text-black md:text-[24px] sm:text-[50px] lg:text-[40px] 2xl:text-[50px] font-bold">
               Clique no botão de Interagir
-            </span>
-            <div className="bg-white grid grid-cols-2 lg:grid-cols-4 lg:pb-14 lg:pt-10 lg:p-20 mt-20 justify-center items-center">
-            <MaterialCard
+            </span> 
+            <div className="bg-white grid  grid-cols-2 lg:grid-cols-4 lg:pb-14 lg:pt-10 lg:p-20 mt-20 justify-center items-center">
+            <MaterialCard 
                 Title="Fênix Inventory ⚡"
                 Text="Essa é a mais nova exclusividade da Fênix"
                 Footer="R$ 280"
