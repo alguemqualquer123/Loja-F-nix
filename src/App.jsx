@@ -87,6 +87,14 @@ function App() {
             </span>
             <div className="bg-white grid grid-cols-2 lg:grid-cols-4 lg:pb-14 lg:pt-10 lg:p-20 mt-20 justify-center items-center">
             <MaterialCard
+                Title="Fênix Inventory ⚡"
+                Text="Essa é a mais nova exclusividade da Fênix"
+                Footer="R$ 280"
+                src={"https://fenix-inventory-pn4g22e5l-sr-vinixs-projects.vercel.app"}
+                Image={FENIXPNG}
+                ToogleImagem={true}
+              />
+            <MaterialCard
                 Title="Fênix Sistema de Liberação id Asgard 🍀"
                 Text="Essa é a mais nova exclusividade da Fênix com a Icon Design"
                 Footer="R$ 80"
